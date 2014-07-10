@@ -1,3 +1,5 @@
+require 'httparty'
+
 class WelcomeController < ApplicationController
 
   def index
