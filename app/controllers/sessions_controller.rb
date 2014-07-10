@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 
   def yahoo_info
      def prepare_access_token(oauth_token, oauth_token_secret)
-            consumer = OAuth::Consumer.new("dj0yJmk9M3V1OVkzY1puM2N4JmQ9WVdrOWJERTJXV04wTjJzbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD1iYQ--", "5aa0ba383f9a12b7bd054aac7f08001c16a836c2"
+            consumer = OAuth::Consumer.new("dj0yJmk9M3V1OVkzY1puM2N4JmQ9WVdrOWJERTJXV04wTjJzbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD1iYQ--", "5aa0ba383f9a12b7bd054aac7f08001c16a836c2",
                 { :site => "hhttp://fantasysports.yahooapis.com/"
                 })
             # now create the access token object from passed values
