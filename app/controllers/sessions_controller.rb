@@ -29,7 +29,7 @@ class SessionsController < ApplicationController
 
         render :json => response.body
       end
-  end
+  
 
   # def create
   #   auth = request.env['rack.auth']
