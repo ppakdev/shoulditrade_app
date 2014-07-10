@@ -4,7 +4,6 @@
 </p>
 
 <p>
-  <%= link_to('Post Your Trade', new_proposal_path) %>
 </p>
 
 <div>
@@ -12,5 +11,5 @@
 </div>
 
 <div>
-  <%= session[:my_auth_hash]['extra']['access_token'].inspect %>
+  <%= session[:my_auth_hash]['extra']['access_token'].inspect if session[:my_auth_hash]%>
 </div>
