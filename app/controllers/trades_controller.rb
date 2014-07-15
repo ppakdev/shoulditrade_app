@@ -12,6 +12,7 @@ class TradesController < ApplicationController
 
   def new
     @trade = Trade.new
+    @trade.user_id = session[:current_user]
     @trade.packages = [Package.new, Package.new]
     @qb = Player.where(position: "QB")
     @rb = Player.where(position: "RB")
