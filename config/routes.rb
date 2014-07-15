@@ -1,9 +1,17 @@
 Rails.application.routes.draw do
 
-  get '/auth/:provider/callback', to: 'sessions#create'
-  get '/yahoo_info', to: 'sessions#yahoo_info'
   root 'welcome#index'
 
-  resources :users, :proposals
+    # Sessions
+  get '/login' => 'sessions#new'
+  post '/sessions' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
 
+  resources :users
+  resources :trades do
+    member do
+      put "like", to: "trades#upvote"
+      put "dislike", to: "trades#downvote"
+    end
+  end
 end

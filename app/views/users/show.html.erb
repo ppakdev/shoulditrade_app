@@ -1,0 +1,24 @@
+<h3><%= @user.username %></h3>
+<p>
+  <%= link_to('Edit profile', edit_user_path(@user)) %>
+</p>
+
+<div id="user">
+  <ul>
+    <li><%= image_tag(@user.image_url) %></li>
+    <li>Username: <%= @user.username %></li>
+    <li>First Name: <%= @user.first_name.capitalize %></li>
+    <li>Last Name: <%= @user.last_name.capitalize %></li>
+    <li>Email: <%= @user.email %></li>
+    <li>
+      <ul>
+        My Trades
+        <% @user.trades.order('created_at Desc').each do |trade| %>
+        <li><%= link_to("#{trade.created_at.strftime("%m/%d/%Y")}", trade_path(trade)) %>
+          <%= button_to "Delete", trade_path(trade), method: :delete,
+          data: {confirm: "Are you sure you want to do that?"} %></li>
+        <% end %>
+      </ul>
+    </li>
+  </ul>
+</div>

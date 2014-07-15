@@ -7,10 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<div id="yahoo">
-  <%= link_to("Sign in with Yahoo", "/auth/yahoo") %>
-</div>
+  <p class="login">
+  <% if current_user %>
+    Welcome back, <%= current_user.first_name %>! |
+    <%= link_to 'My Profile', user_path(current_user) %> |
+    <%= link_to 'Log Out', logout_path %> |
+  <% else %>
+    <%= link_to 'Log In', login_path %> |
+    <%= link_to 'Sign Up', new_user_path %> |
+  <% end %>
+  </p>
+  <h1><%= link_to('Should I Trade?', trades_path) %></h1>
+  <h2><%= link_to('Post a Trade', new_trade_path) %></h2>
 
 <%= yield %>
 

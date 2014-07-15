@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+
+p.login {
+  text-align: right;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  width: 800px;
+  margin: 0 auto;
+}
+
+table {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  width: 800px;
+  margin: 0 auto;
+}

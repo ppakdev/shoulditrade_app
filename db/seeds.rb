@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+players = FFN.seed.each do |player|
+  Player.create( name: player["displayName"],
+                  team: player["team"],
+                  position: player["position"]
+    )
+end

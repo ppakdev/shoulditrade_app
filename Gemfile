@@ -40,17 +40,16 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'rails_12factor', group: :production
 
-gem 'omniauth'
-gem 'omniauth-yahoo'
-
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'rspec-collection_matchers'
   gem 'shoulda-matchers', require: false
   gem 'pry-rails'
   gem 'awesome_print'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
-gem 'net-http-persistent'
-
 gem 'httparty'
+
+gem 'acts_as_votable', '~> 0.10.0'
