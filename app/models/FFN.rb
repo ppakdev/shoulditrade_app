@@ -1,4 +1,4 @@
-module FFN
+class FFN
 
   def self.seed
     api_key = ENV['FFN_API_KEY']
