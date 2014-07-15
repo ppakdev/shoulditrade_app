@@ -1,8 +1,7 @@
 class FFN
 
   def self.seed
-    api_key = ENV['FFN_API_KEY']
-    api_call = HTTParty.get("http://www.fantasyfootballnerd.com/service/players/json/#{api_key}")["Players"]
+    api_call = HTTParty.get("http://www.fantasyfootballnerd.com/service/players/json/nge59mjr2nyz")["Players"]
   end
 
 end
