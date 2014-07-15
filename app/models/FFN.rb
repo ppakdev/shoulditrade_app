@@ -1,7 +1,8 @@
-class FFN
+class FFN < ActiveRecord::Migration
 
   def self.seed
-    api_call = HTTParty.get("http://www.fantasyfootballnerd.com/service/players/json/nge59mjr2nyz")["Players"]
+    api_key = env['FFN_API_KEY']
+    api_call = HTTParty.get("http://www.fantasyfootballnerd.com/service/players/json/#{api_key}")["Players"]
   end
 
 end
