@@ -1,4 +1,4 @@
-class FFN < ActiveRecord::Migration
+class FFN
 
   def self.seed
     api_key = env['FFN_API_KEY']
