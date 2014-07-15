@@ -9,7 +9,7 @@
         <%= f.fields_for :packages do |a| %>
         <td>
         <b><%= a.label :players  %></b><br>
-        Players:<br>
+        Quarterbacks:<br>
         <%= a.select( :players, options_for_select(@qb.map do |player|
           [player.name, player.id]
         end), {}, {multiple: true, size: 5}) %>
