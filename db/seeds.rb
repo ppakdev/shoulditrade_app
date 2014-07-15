@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+require '../app/models/FFN.rb'
 
 players = FFN.seed.each do |player|
   Player.create( name: player["displayName"],
