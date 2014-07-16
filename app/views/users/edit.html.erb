@@ -1,35 +1,6 @@
 <h3>Edit Profile</h3>
 
-<ul>
-  <% @user.errors.full_messages.each do |msg| %>
-  <li><%= msg %></li>
-  <% end %>
-</ul>
+<%= render 'form' %>
 
-<%= form_for @user do |f| %>
-  <%= f.label :username %>:
-  <%= f.text_field :username %>
-  <br>
-  <%= f.label :email %>:
-  <%= f.text_field :email %>
-  <br>
-  <%= f.label :first_name %>:
-  <%= f.text_field :first_name %>
-  <br>
-  <%= f.label :last_name %>:
-  <%= f.text_field :last_name %>
-  <br>
-  <%= f.label :image_url %>
-  <%= f.text_field :image_url %>:
-  <br>
-  <%= f.label :password %>:
-  <%= f.password_field :password %>(*Must be at least 6 characters)
-  <br>
-  <%= f.label :password_confirmation %>:
-  <%= f.password_field :password_confirmation %>
-  <br>
-
-  <%= f.submit %>
-<% end %>
 
 <%= button_to "Delete This Account", user_path(@user), method: :delete, data: {confirm: "Are you sure you want to do that?"} %>

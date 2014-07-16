@@ -1,0 +1,3 @@
+<%= a.select( :players, options_for_select(@qb.map do |player|
+  [player.name, player.id]
+end), {}, {multiple: true, size: 5}) %>

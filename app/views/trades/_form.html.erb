@@ -1,0 +1,46 @@
+<table>
+  <%= form_for @trade do |f| %>
+  <tr>
+    <th colspan="2">
+    </th>
+  </tr>
+  <tr>
+
+        <%= f.fields_for :packages do |a| %>
+        <td>
+        <b><%= a.label :players  %></b><br>
+        Quarterbacks:<br>
+        <%= a.select( :players, options_for_select(@qb.map do |player|
+          [player.name, player.id]
+        end), {}, {multiple: true, size: 5}) %>
+        <br>
+        Running Backs:<br>
+        <%= a.select( :players, options_for_select(@rb.map do |player|
+          [player.name, player.id]
+        end), {}, {multiple: true, size: 10}) %>
+        <br>
+        Wide Receivers:<br>
+        <%= a.select( :players, options_for_select(@wr.map do |player|
+          [player.name, player.id]
+        end), {}, {multiple: true, size: 10}) %>
+        <br>
+        Tight Ends:<br>
+        <%= a.select( :players, options_for_select(@te.map do |player|
+          [player.name, player.id]
+        end), {}, {multiple: true, size: 4}) %>
+        <br>
+        Kickers:<br>
+        <%= a.select( :players, options_for_select(@kicker.map do |player|
+          [player.name, player.id]
+        end), {}, {multiple: true, size: 4}) %>
+        <br>
+        <% end %>
+  </tr>
+  <tr>
+    <th colspan="2">
+      <%= f.submit %>
+      <% end %>
+      <br>
+    </th>
+  </tr>
+</table>
