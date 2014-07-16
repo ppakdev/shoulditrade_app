@@ -4,7 +4,7 @@
 
 ## What is it?
 - An app to help fantasy sports players (currently just football) make decisions on trade proposals they've received.
-- Also allows users to provide input on other users' trade quandaries.
+- Also allows users the opportunity to provide input on other users' trade quandaries.
 
 ### Requirements
 -[ERD](https://www.lucidchart.com/documents/view/2aceb3b9-7c28-4e41-987c-f50f1465ee44)
