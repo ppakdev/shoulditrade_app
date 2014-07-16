@@ -7,8 +7,8 @@
 - Also allows users to provide input on other users' trade quandaries.
 
 ### Requirements
--ERD:
-![ERD Image](https://www.lucidchart.com/documents/view/2aceb3b9-7c28-4e41-987c-f50f1465ee44 "ERD")
+-[ERD](https://www.lucidchart.com/documents/view/2aceb3b9-7c28-4e41-987c-f50f1465ee44)
+
 -[User Stories](https://trello.com/b/lSsQEwVR/peter-pak-should-i-trade)
 
 ### Coming Soon:
